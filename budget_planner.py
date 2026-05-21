@@ -1,20 +1,14 @@
-import uuid
-from datetime import datetime
+class BudgetPlanner:
+    def __init__(self):
+        self.budgets = []
 
-_budgets = []
+    def add_budget(self, name, amount):
+        budget = {"name": name, "amount": amount}
+        self.budgets.append(budget)
+        return budget
 
-def add_budget(category, amount):
-    budget = {
-        "id": str(uuid.uuid4()),
-        "category": category,
-        "amount": float(amount),
-        "created_at": datetime.now().isoformat()
-    }
-    _budgets.append(budget)
-    return budget
+    def get_budgets(self):
+        return self.budgets
 
-def get_budgets():
-    return list(_budgets)
-
-def calculate_total_budget():
-    return sum(b["amount"] for b in _budgets)
+    def calculate_total_budget(self):
+        return sum(b["amount"] for b in self.budgets)

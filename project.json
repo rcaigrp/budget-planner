@@ -1,1 +1,12 @@
-{"goal": "Create a tool to track budgets.", "acceptance_criteria": ["budget_planner module exists and can be imported", "add_budget function adds a budget and returns a dict", "get_budgets function returns a list of budgets", "calculate_total_budget function returns the sum of all budget amounts"], "meeting_budget": 4, "meetings_held": 3, "status": "complete"}
+{
+  "goal": "Create a tool to track budgets.",
+  "acceptance_criteria": [
+    "budget_planner module exists and can be imported",
+    "add_budget function adds a budget and returns a dict",
+    "get_budgets function returns a list of budgets",
+    "calculate_total_budget function returns the sum of all budget amounts"
+  ],
+  "meeting_budget": 4,
+  "meetings_held": 3,
+  "status": "complete"
+}

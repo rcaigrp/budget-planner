@@ -15,4 +15,6 @@ Track budgets and calculate totals.
 🚧 IN PROGRESS
 
 ## Notes
-- Initial implementation and tests created.
+- Meeting 1: Re-verifying acceptance tests and updating status.
+- Previous run passed.
+- Next: Confirm completion criteria and advance to finalization.

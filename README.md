@@ -12,8 +12,9 @@ Track budgets and calculate totals.
 4. `calculate_total_budget` returns the sum of all budget amounts.
 
 ## Status
-✅ COMPLETE
+✅ DONE
 
 ## Notes
-- Meeting 2/4: Implementation and tests created. All criteria verified.
-- Project completed ahead of budget.
+- Final acceptance tests passed.
+- All 4 criteria met.
+- Sprint complete.

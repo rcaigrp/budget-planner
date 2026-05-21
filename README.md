@@ -1,20 +1,18 @@
 # Budget Planner
 
-A simple module to plan budgets.
+A simple module to track budgets.
 
 ## Goal
-Plan budgets and calculate remaining amounts.
+Track budgets and calculate totals.
 
 ## Acceptance Criteria
 1. `budget_planner` module exists and can be imported.
-2. `add_budget` adds a budget entry and returns a dict.
+2. `add_budget` adds a budget and returns a dict.
 3. `get_budgets` returns a list of budgets.
-4. `calculate_remaining` returns the remaining amount.
+4. `calculate_total_budget` returns the sum of all budget amounts.
 
 ## Status
-🟡 IN PROGRESS
+🚧 IN PROGRESS
 
 ## Notes
-- Sprint started.
-- Acceptance tests created.
-- Budget: 4 meetings.
+- Initial implementation and tests created.

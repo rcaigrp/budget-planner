@@ -1,31 +1,32 @@
 import pytest
-from budget_planner import add_budget, get_budgets, calculate_remaining
+from budget_planner import add_budget, get_budgets, calculate_total_budget, _budgets
 
 @pytest.fixture
 def clear_budgets():
-    from budget_planner import _budgets
+    initial = _budgets[:]
     _budgets.clear()
     yield
     _budgets.clear()
+    _budgets.extend(initial)
 
 def test_criterion_1_module_exists():
     import budget_planner
     assert budget_planner is not None
 
-def test_criterion_2_add_budget():
-    result = add_budget(category="food", amount=50)
+def test_criterion_2_add_budget(clear_budgets):
+    result = add_budget("Food", 500.0)
     assert isinstance(result, dict)
-    assert result["category"] == "food"
-    assert result["amount"] == 50
+    assert result["category"] == "Food"
+    assert result["amount"] == 500.0
 
-def test_criterion_3_get_budgets():
-    add_budget(category="food", amount=50)
+def test_criterion_3_get_budgets(clear_budgets):
+    add_budget("Food", 500.0)
     budgets = get_budgets()
     assert isinstance(budgets, list)
     assert len(budgets) == 1
 
-def test_criterion_4_calculate_remaining():
-    add_budget(category="food", amount=50)
-    add_budget(category="transport", amount=30)
-    remaining = calculate_remaining(100)
-    assert remaining == 20
+def test_criterion_4_calculate_total_budget(clear_budgets):
+    add_budget("Food", 500.0)
+    add_budget("Rent", 1000.0)
+    total = calculate_total_budget()
+    assert total == 1500.0

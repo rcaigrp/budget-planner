@@ -1,0 +1,1 @@
+{"goal": "Create a tool to plan budgets.", "acceptance_criteria": ["budget_planner module exists and can be imported", "add_budget function adds a budget entry and returns a dict", "get_budgets function returns a list of budgets", "calculate_remaining function returns the remaining amount"], "meeting_budget": 4, "meetings_held": 0, "status": "active"}
